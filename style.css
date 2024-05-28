@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   background-image: linear-gradient(90deg, #7d5fff, #7158e2);
+   margin: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   overflow: hidden;
+   font-family: 'roboto', sans-serif;
+}
+
+.search {
+   position: relative;
+   height: 50px;
+}
+
+.search .input {
+   background-color: white;
+   border: 0;
+   font-size: 18px;
+   padding: 15px;
+   height: 50px;
+   width: 50px;
+   transition: width 0.3s ease;
+   border-radius: 5px;
+}
+
+.btn {
+   border-radius: 5px;
+   background-color: white;
+   border: 0;
+   cursor: pointer;
+   font-size: 24px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 50px;
+   width: 50px;
+   transition: transform 0.3s ease;
+}
+
+i {
+   color: #7158e2;
+}
+
+.btn:focus,
+input:focus {
+   outline: none;
+}
+
+.search.active .input {
+   width: 200px;
+   border-radius: 5px 0 0 5px;
+}
+
+.search.active .btn {
+   transform: translateX(198px);
+   border-radius: 0 5px 5px 0;
+}
